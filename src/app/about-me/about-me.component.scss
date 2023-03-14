@@ -39,6 +39,7 @@ h2 {
 
 .about-me-right-container {
     display: flex;
+    align-items: center;
 
     img {
         border-radius: 50%;
@@ -46,16 +47,9 @@ h2 {
     }
 }
 
-.line-container {
-    display: flex;
-    flex-direction: column;
+.line-photo {
     width: 270px;
-
-    div {
-        height: 100%;
-    }
-
-    & :first-child {
-        border-bottom: 4px solid #FA7902;
-    }
+    height: 0;
+    border: 2px solid #FA7902;
 }
+
