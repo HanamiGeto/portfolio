@@ -1,8 +1,31 @@
 <header>
-    <img src="../../assets/img/Logo.svg">
-    <div>
-        <a href="">About me</a>
-        <a href="">Skills</a>
-        <a href="">Portfolio</a>
-    </div>
+    <a [ngClass]="{'d-none': router.url == '/imprint'}" (click)="scroll('above-the-fold')">
+        <span class="logo">A</span>
+        <span class="logo">le</span>
+        <span class="logo">x</span>
+    </a>
+    <a [ngClass]="{'d-none': router.url !== '/imprint'}" routerLink="/">
+        <span class="logo">A</span>
+        <span class="logo">le</span>
+        <span class="logo">x</span>
+    </a>
+    <nav>
+        <a (click)="scroll('about-me')" [ngClass]="{'active': section === 'about-me'}">
+            <span>Abou</span>t me
+        </a>
+        <a (click)="scroll('skills')" [ngClass]="{'active': section === 'skills'}">
+           <span>Skills</span>
+        </a>
+        <a (click)="scroll('portfolio')" [ngClass]="{'active': section === 'portfolio'}">
+            <span>Portf</span>olio
+        </a>
+    </nav>
+    <img *ngIf="!menuOpen" (click)="openMenu()"  class="burger" src="/assets/img/burger.svg" alt="">
+    <img *ngIf="menuOpen" (click)="closeMenu()"  class="burger" src="/assets/img/close-final.svg" alt="">
 </header>
+<nav class="mobile-nav" *ngIf="menuOpen" [@slideInOut]>
+    <a (click)="scroll('about-me')">About me</a>
+    <a (click)="scroll('skills')">My skills</a>
+    <a (click)="scroll('portfolio')">Portfolio</a>
+    <a (click)="scroll('contact')"><span>Contact</span></a>
+</nav>

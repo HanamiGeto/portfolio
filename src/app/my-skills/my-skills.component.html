@@ -1,13 +1,22 @@
+<div data-aos="zoom-in-left" class="btn-container mobile">
+    <!-- <button>Get in touch</button> -->
+    <a href="#contact">Get in touch</a>
+</div>
 <div class="my-skill-left-container">
-    <div class="skill" *ngFor="let icon of icons; let i = index">
+    <div data-aos="zoom-in-right" class="skill" *ngFor="let icon of icons; let i = index">
         <img src="/assets/img/{{ icon }}.svg" alt="">
         <p>{{ name[i] }}</p>
     </div>
+    <img class="shadow" src="/assets/img/GReen shadow.svg" alt="">
 </div>
 <div class="my-skill-right-container">
-    <h2>My skills</h2>
-    <p>I have grown my frontend developments skills that have allowed me to create different real projects</p>
-    <div class="btn-container">
-        <button>Get in touch</button>
+    <div data-aos="zoom-in-left" class="headline">
+        <h2>My skills</h2>
+        <div class="line"></div>
+    </div>
+    <p data-aos="zoom-in-left">I have grown my frontend developments skills that have allowed me to create different real projects</p>
+    <div data-aos="zoom-in-left" class="btn-container">
+        <!-- <button>Get in touch</button> -->
+        <a href="#contact">Get in touch</a>
     </div>
 </div>

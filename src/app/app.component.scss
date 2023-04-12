@@ -1,14 +1,32 @@
-.about-me-section {
+.footer-section {
     display: flex;
-    justify-content: space-between;
+    background-color: #141D2F;
+    padding: 0 100px;
     align-items: center;
-    position: relative;
-    z-index: 1;
-    padding: 0 0 0 100px;
-    margin-bottom: 300px;
+    justify-content: space-between;
+    height: 291px;
+    border-top: 4px solid #FA7902;
 }
 
-.my-skills-section {
-    display: flex;
-    justify-content: space-between;
+.footer-imprint {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+@media (max-width: 1080px) {
+
+    .footer-section {
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 380px;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .footer-section {
+        padding: 0 25px;
+    }
 }

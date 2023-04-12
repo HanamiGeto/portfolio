@@ -1,0 +1,14 @@
+<ng-container *ngFor="let project of projects; let i = index">
+    <div [ngClass]="{'reverse-project' : i % 2 == 1}"  class="projects">
+        <img data-aos="fade-up"src="/assets/img/{{ project.picture }}.png" alt="">
+        <div class="project-description">
+            <h3 data-aos="fade-up">{{ project.name }}</h3>
+            <span data-aos="fade-up">{{ project.technologies }}</span>
+            <p data-aos="fade-up">{{ project.description }}</p>
+            <div class="btn-container">
+                <a href="{{ project.liveTest }}" target="_blank" data-aos="fade-up">Live test</a>
+                <a href="{{ project.github }}" target="_blank" data-aos="fade-up">Github</a>
+            </div>
+        </div>
+    </div>
+</ng-container>

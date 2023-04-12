@@ -17,9 +17,11 @@ h2 {
 
     img {
         height: 50px;
+        transition: all 125ms ease-in-out;
 
         &:hover {
-            height: 60px;
+            transform: scale(1.3);
+            transition: all 125ms ease-in-out;
         }
     }
 }
@@ -41,7 +43,9 @@ h2 {
     display: flex;
     align-items: center;
 
-    img {
+    .pic {
+        height: 450px;
+        object-fit: contain;
         border-radius: 50%;
         border: 4px solid #FA7902;    
     }
@@ -53,3 +57,48 @@ h2 {
     border: 2px solid #FA7902;
 }
 
+.shadow {
+    position: absolute;
+    right: -400px;
+    top: -100px;
+    z-index: -1;
+}
+
+@media (max-width: 1326px) {
+
+    .line-photo {
+        width: 100px;
+    }
+}
+
+@media (max-width: 1239px) {
+
+    .about-me-right-container {
+
+        .pic {
+            height: 350px;  
+        }
+    }
+
+    h2 {
+        font-size: 80px;
+    }
+}
+
+@media (max-width: 1080px) {
+
+    .about-me-right-container {
+        display: none;
+    }
+
+    .about-me-left-container {
+        width: auto;
+    }
+}
+
+@media (max-width: 800px) {
+
+    h2 {
+        font-size: 45px;
+    }
+}
