@@ -250,14 +250,17 @@
        url('/assets/fonts/poppins-v20-latin-900italic.svg#Poppins') format('svg'); /* Legacy iOS */
 }
 
+
+* {
+  font-family: 'Poppins';
+}
+
 html,
 body {
-  // display: flex;
-  // height: 100%;
-  // width: 100vw;
-  scroll-behavior: smooth !important;
+  scroll-behavior: smooth;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+  overflow-x: hidden;
     &::-webkit-scrollbar {
         display: none;
       }
@@ -266,7 +269,5 @@ body {
 body {
     margin: 0;
     background-color: #141D2F;
-    font-family: 'Poppins';
     color: white;
 }
-

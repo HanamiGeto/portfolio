@@ -12,26 +12,26 @@ export class ProjectComponent implements OnInit {
     {
       name: 'Join',
       technologies: 'HTML | CSS | JavaScript',
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. Please use the guest login as it has already tasks and contacts.',
       picture: 'join',
-      liveTest: 'https://alexander-schneider.developerakademie.net/join/index.html',
-      github: 'https://github.com/HanamiGeto/join'
+      liveTest: 'join',
+      github: 'join'
     },
     {
       name: 'El Pollo Loco',
       technologies: 'HTML | CSS | JavaScript',
       description: 'A simple Jump-andRun game basend on an object-oriented approach. Help Pepe to find coins and poison bottles to fight against the killer chicken.',
       picture: 'polloloco',
-      liveTest: 'https://alexander-schneider.developerakademie.net/el_pollo_locco/index.html',
-      github: 'https://github.com/HanamiGeto/el-pollo-loco'
+      liveTest: 'el_pollo_locco',
+      github: 'el-pollo-loco'
     },
     {
       name: 'Pokedex',
       technologies: 'HTML | CSS | JavaScript | Api',
       description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
       picture: 'pokedex',
-      liveTest: 'https://alexander-schneider.developerakademie.net/pokedex/index.html',
-      github: 'https://github.com/HanamiGeto/pokedex'
+      liveTest: 'pokedex',
+      github: 'pokedex'
     }
   ];
 

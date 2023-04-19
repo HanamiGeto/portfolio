@@ -11,6 +11,6 @@ export class FooterComponent {
   constructor(public router: Router, private comp: HeaderComponent) { }
 
   public scrollToHead(id) {
-    this.comp.scroll(id);
+    this.comp.scrollToSection(id);
   }
 }
