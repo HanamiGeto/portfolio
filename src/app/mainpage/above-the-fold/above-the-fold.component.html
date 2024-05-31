@@ -1,0 +1,49 @@
+<!-- eslint-disable @angular-eslint/template/interactive-supports-focus -->
+<!-- eslint-disable @angular-eslint/template/click-events-have-key-events -->
+<div class="above-the-fold-head">
+  <div class="photo-container">
+    <img src="assets/img/crop.png" alt="Alexander Schneider Webdeveloper" />
+  </div>
+
+  <div class="right-container">
+    <div class="text">
+      <p class="vertical-text">I am</p>
+      <div class="right-text">
+        <p>Alex Schneider</p>
+        <p>FRONTEND DEVELOPER</p>
+      </div>
+    </div>
+    <div class="btn-container">
+      <a (click)="scrollService.scrollToSection('contact')">Let's talk!</a>
+    </div>
+  </div>
+</div>
+
+<div class="above-the-fold-bottom">
+  <div class="above-the-fold-bottom-left">
+    <div class="line"></div>
+    <a href="https://github.com/HanamiGeto" target="_blank">
+      <img src="assets/img/github-icon.svg" alt="" />
+    </a>
+    <a (click)="scrollService.scrollToSection('contact')">
+      <img src="assets/img/mail-icon.svg" alt="" />
+    </a>
+    <a
+      href="https://www.linkedin.com/in/alexander-schneider-23b22423b/"
+      target="_blank"
+    >
+      <img src="assets/img/linkedin-icon.svg" alt="" />
+    </a>
+    <a (click)="scrollService.scrollToSection('contact')"
+      >mail&#64;schneider-alexander.net</a
+    >
+  </div>
+  <div class="above-the-fold-bottom-right">
+    <a (click)="scrollService.scrollToSection('about-me')"
+      >Scroll down
+      <img src="assets/img/arrow-down.svg" alt="" />
+    </a>
+  </div>
+</div>
+
+<img class="vector" src="assets/img/Vector.png" alt="" />

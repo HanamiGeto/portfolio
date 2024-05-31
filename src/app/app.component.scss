@@ -1,0 +1,33 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.host-imprint {
+  height: 100vh;
+}
+
+.footer-section {
+  display: flex;
+  background-color: #141d2f;
+  padding: 0 100px;
+  align-items: center;
+  justify-content: space-between;
+  height: 122px;
+  border-top: 4px solid #fa7902;
+}
+
+@media (max-width: 1080px) {
+  .footer-section {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 240px;
+  }
+}
+
+@media (max-width: 800px) {
+  .footer-section {
+    padding: 0 25px;
+  }
+}

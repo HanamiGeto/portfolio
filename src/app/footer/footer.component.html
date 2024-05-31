@@ -1,0 +1,26 @@
+<!-- eslint-disable @angular-eslint/template/interactive-supports-focus -->
+<!-- eslint-disable @angular-eslint/template/click-events-have-key-events -->
+<div class="left-footer">
+  <a (click)="scrollService.scrollToSection('above-the-fold')">
+    <pf-logo></pf-logo>
+  </a>
+  <a class="imprint-link" routerLink="/imprint"> <span>Impres</span>sum </a>
+</div>
+<p>&copy; Alex Schneider 2023</p>
+<div class="right-footer">
+  <a href="https://github.com/HanamiGeto" target="_blank">
+    <img src="assets/img/github-icon.svg" alt="" />
+  </a>
+  <a (click)="scrollService.scrollToSection('contact')">
+    <img src="assets/img/mail-icon.svg" alt="" />
+  </a>
+  <a
+    href="https://www.linkedin.com/in/alexander-schneider-23b22423b/"
+    target="_blank"
+  >
+    <img src="assets/img/linkedin-icon.svg" alt="" />
+  </a>
+</div>
+<a class="imprint-link mobile" routerLink="/imprint">
+  <span>Impres</span>sum
+</a>

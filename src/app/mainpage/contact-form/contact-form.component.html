@@ -1,0 +1,69 @@
+<!-- eslint-disable @angular-eslint/template/elements-content -->
+<!-- eslint-disable @angular-eslint/template/interactive-supports-focus -->
+<!-- eslint-disable @angular-eslint/template/click-events-have-key-events -->
+<form [formGroup]="form" (ngSubmit)="submitForm()">
+  <div data-aos="fade-up">
+    <div class="input-container">
+      <label for="name"></label>
+      <input id="name" formControlName="name" placeholder="Your name" />
+      <pf-form-validation-icon
+        controlName="name"
+        [isValid]="isFieldValid('name')"
+      ></pf-form-validation-icon>
+      <pf-form-errors
+        controlName="name"
+        [messages]="{ required: 'Your name is required' }"
+      ></pf-form-errors>
+    </div>
+  </div>
+  <div data-aos="fade-up">
+    <div class="input-container">
+      <label for="email"></label>
+      <input id="email" formControlName="email" placeholder="Your email" />
+      <pf-form-validation-icon
+        controlName="email"
+        [isValid]="isFieldValid('email')"
+      ></pf-form-validation-icon>
+      <pf-form-errors
+        controlName="email"
+        [messages]="{
+          required: 'Your email is required',
+          invalidemail: 'Your email is invalid'
+        }"
+      ></pf-form-errors>
+    </div>
+  </div>
+  <div data-aos="fade-up">
+    <div class="input-container">
+      <label for="message"></label>
+      <textarea
+        id="message"
+        formControlName="message"
+        placeholder="Your message"
+        cols="30"
+        rows="10"
+      ></textarea>
+      <pf-form-validation-icon
+        controlName="message"
+        [isValid]="isFieldValid('message')"
+      ></pf-form-validation-icon>
+      <pf-form-errors
+        controlName="message"
+        [messages]="{ required: 'Your message is empty' }"
+      ></pf-form-errors>
+    </div>
+  </div>
+  <div data-aos="fade-up" class="btn-container">
+    @if (!messageSent) {
+      <button type="submit" [disabled]="form.invalid">Send message :)</button>
+    } @else {
+      <p data-aos="fade-up">Message sent!</p>
+    }
+  </div>
+  <div data-aos="fade-up" class="go-up-container">
+    <a
+      (click)="scrollService.scrollToSection('above-the-fold')"
+      class="go-up-icon"
+    ></a>
+  </div>
+</form>

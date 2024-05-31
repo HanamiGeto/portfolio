@@ -1,0 +1,27 @@
+<!-- eslint-disable @angular-eslint/template/interactive-supports-focus -->
+<!-- eslint-disable @angular-eslint/template/click-events-have-key-events -->
+<div data-aos="zoom-in-left" class="btn-container mobile">
+  <a (click)="scrollService.scrollToSection('contact')">Get in touch</a>
+</div>
+<div class="my-skill-left-container">
+  @for (icon of icons; track $index) {
+    <div data-aos="zoom-in-right" class="skill">
+      <img src="assets/img/{{ icon }}.svg" alt="" />
+      <p>{{ name[$index] }}</p>
+    </div>
+  }
+  <img class="shadow" src="assets/img/GReen shadow.svg" alt="" />
+</div>
+<div class="my-skill-right-container">
+  <div data-aos="zoom-in-left" class="headline">
+    <h2>My skills</h2>
+    <div class="line"></div>
+  </div>
+  <p data-aos="zoom-in-left">
+    I have grown my frontend developments skills that have allowed me to create
+    different real projects
+  </p>
+  <div data-aos="zoom-in-left" class="btn-container">
+    <a (click)="scrollService.scrollToSection('contact')">Get in touch</a>
+  </div>
+</div>

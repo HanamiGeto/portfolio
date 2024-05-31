@@ -1,0 +1,132 @@
+.projects {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 100px;
+  gap: 200px;
+
+  h3 {
+    font-size: 32px;
+    color: #ff4747;
+    margin-top: 0;
+  }
+}
+
+.project-description {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+
+  span {
+    font-size: 23px;
+    color: #fa7902;
+  }
+}
+
+.btn-container {
+  display: flex;
+  margin-top: 44px;
+  gap: 86px;
+
+  a {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 23px;
+    text-decoration: none;
+    padding: 15px 30px;
+    width: max-content;
+    background: transparent;
+    border: 1px solid #fa7902;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 125ms ease-in-out;
+
+    &:hover {
+      background: #fa7902;
+      transition: all 125ms ease-in-out;
+    }
+  }
+
+  & :first-child {
+    background: #ff4747;
+    border: none;
+  }
+}
+
+.reverse-project {
+  flex-direction: row-reverse;
+  padding-left: 100px;
+  text-align: end;
+
+  .project-description {
+    align-items: flex-end;
+  }
+}
+
+@media (max-width: 1434px) {
+  .projects {
+    padding-left: 100px;
+    gap: 0;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 1326px) {
+  img {
+    height: 500px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 1239px) {
+  .projects {
+    margin: 50px 0;
+  }
+
+  img {
+    height: 400px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-description {
+    align-items: center;
+  }
+
+  .reverse-project {
+    padding-left: 100px;
+    text-align: center;
+
+    .project-description {
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .projects {
+    padding: 0;
+  }
+
+  .project-description {
+    padding: 0 25px;
+    width: auto;
+  }
+
+  .btn-container {
+    gap: 50px;
+  }
+
+  img {
+    height: 300px;
+  }
+}

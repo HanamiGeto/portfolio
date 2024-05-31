@@ -1,0 +1,14 @@
+import { Routes } from '@angular/router';
+import { ContentComponent } from './mainpage/content/content.component';
+import { ImprintComponent } from './imprint/imprint.component';
+
+export const routes: Routes = [
+  {
+    path: '',
+    component: ContentComponent,
+  },
+  {
+    path: 'imprint',
+    component: ImprintComponent,
+  },
+];

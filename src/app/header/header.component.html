@@ -1,0 +1,48 @@
+<!-- eslint-disable @angular-eslint/template/interactive-supports-focus -->
+<!-- eslint-disable @angular-eslint/template/click-events-have-key-events -->
+<header>
+  <nav>
+    <a (click)="scrollService.scrollToSection('above-the-fold')">
+      <pf-logo></pf-logo>
+    </a>
+    <div>
+      <a
+        (click)="scrollService.scrollToSection('about-me')"
+        [class.active]="activeComponent === 'about-me'"
+      >
+        <span>Abou</span>t me
+      </a>
+      <a
+        (click)="scrollService.scrollToSection('skills')"
+        [class.active]="activeComponent === 'skills'"
+      >
+        <span>Skills</span>
+      </a>
+      <a
+        (click)="scrollService.scrollToSection('portfolio')"
+        [class.active]="activeComponent === 'portfolio'"
+      >
+        <span>Portf</span>olio
+      </a>
+    </div>
+  </nav>
+  <button class="burger-btn" (click)="toggleMenu()">
+    <img [src]="burgerMenuSource" alt="Burger Menu" />
+  </button>
+</header>
+@if (menuOpen) {
+  <nav class="mobile-nav" [@slideInOut]>
+    <a (click)="scrollService.scrollToSection('about-me'); toggleMenu()"
+      >About me</a
+    >
+    <a (click)="scrollService.scrollToSection('skills'); toggleMenu()"
+      >My skills</a
+    >
+    <a (click)="scrollService.scrollToSection('portfolio'); toggleMenu()"
+      >Portfolio</a
+    >
+    <a (click)="scrollService.scrollToSection('contact'); toggleMenu()"
+      ><span>Contact</span></a
+    >
+  </nav>
+}

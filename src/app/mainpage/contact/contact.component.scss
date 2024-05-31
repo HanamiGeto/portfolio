@@ -1,0 +1,236 @@
+.line {
+  width: 50px;
+  height: 0;
+  border: 2px solid #ff4747;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+h2 {
+  font-size: 90px;
+  margin-left: 50px;
+}
+
+.contact-header {
+  display: flex;
+  align-items: center;
+}
+
+.contact-container {
+  display: flex;
+  padding: 0 100px;
+  margin-bottom: 90px;
+  justify-content: space-between;
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+
+  h4 {
+    margin: 0 0 35px;
+    font-size: 32px;
+    width: max-content;
+  }
+}
+
+.right-container {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+
+  & input,
+  textarea {
+    width: 620px;
+    border-radius: 10px;
+    border: none;
+    border: 1px solid #ff4747;
+    background-color: #141d2f;
+    padding: 15px 25px;
+    cursor: pointer;
+    font-family: "Poppins";
+    color: white;
+    transition: all 125ms ease-in-out;
+    box-sizing: border-box;
+
+    &.ng-touched,
+    &.ng-dirty {
+      &.ng-invalid {
+        border: 1px solid #e61c40;
+        background-image: url("/assets/img/invalid.svg");
+        background-repeat: no-repeat;
+        background-position: top 12px right 25px;
+      }
+
+      &.ng-valid {
+        border: 1px solid #70e61c;
+        background-image: url("/assets/img/valid.svg");
+        background-repeat: no-repeat;
+        background-position: top 12px right 25px;
+      }
+    }
+
+    &::placeholder {
+      color: white;
+      font-family: "Poppins";
+    }
+
+    &:hover {
+      border: 1px solid #fa7902;
+      transition: all 125ms ease-in-out;
+    }
+  }
+
+  .error {
+    color: red;
+  }
+
+  p {
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+}
+
+.btn-container {
+  height: 70px;
+  align-self: center;
+
+  p {
+    margin: 0;
+    color: #70e61c;
+    font-size: 36px;
+  }
+
+  button {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 23px;
+    padding: 15px 30px;
+    width: fit-content;
+    background: #fa7902;
+    border: none;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 125ms ease-in-out;
+
+    &:hover {
+      background: #ff4747;
+      padding: 20px 40px;
+      transition: all 125ms ease-in-out;
+    }
+
+    &:disabled {
+      opacity: 0.1;
+      cursor: unset;
+
+      &:hover {
+        background: #fa7902;
+        padding: 15px 30px;
+      }
+    }
+  }
+}
+
+.go-up-container {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin-top: 70px;
+
+  .go-up-icon {
+    height: 39px;
+    width: 39px;
+    cursor: pointer;
+    background-image: url("/assets/img/go-up.svg");
+    transition: all 125ms ease-in-out;
+
+    &:hover {
+      background-image: url("/assets/img/go-up-hover.svg");
+      transition: all 125ms ease-in-out;
+    }
+  }
+}
+
+img {
+  position: absolute;
+  bottom: -280px;
+  left: -30px;
+  z-index: -1;
+}
+
+@media (max-width: 1326px) {
+  .right-container {
+    & input,
+    textarea {
+      width: 400px;
+    }
+  }
+}
+
+@media (max-width: 1239px) {
+  h2 {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .contact-container {
+    flex-direction: column;
+    gap: 45px;
+  }
+
+  .left-container {
+    width: 100%;
+  }
+
+  .right-container {
+    & input,
+    textarea {
+      width: 100%;
+    }
+  }
+
+  img {
+    bottom: -450px;
+    left: -100px;
+  }
+}
+
+@media (max-width: 800px) {
+  h2 {
+    font-size: 45px;
+    margin-left: 5px;
+  }
+
+  .line {
+    width: 20px;
+  }
+
+  .contact-container {
+    padding: 0 25px;
+  }
+
+  .left-container {
+    & :nth-child(2) {
+      margin: 0;
+    }
+
+    & :nth-child(3) {
+      margin-bottom: 0;
+    }
+
+    h4 {
+      font-size: 23px;
+      margin-bottom: 25px;
+    }
+  }
+
+  .btn-container {
+    button {
+      font-size: 16px;
+    }
+  }
+}

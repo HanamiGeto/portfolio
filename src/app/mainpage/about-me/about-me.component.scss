@@ -1,0 +1,97 @@
+.about-me-left-container {
+  display: flex;
+  flex-direction: column;
+  width: 471px;
+}
+
+h2 {
+  font-size: 90px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  width: 178px;
+
+  img {
+    height: 50px;
+    transition: all 125ms ease-in-out;
+
+    &:hover {
+      transform: scale(1.3);
+      transition: all 125ms ease-in-out;
+    }
+  }
+}
+
+.personal-info {
+  display: flex;
+  margin-top: 35px;
+
+  p {
+    display: flex;
+    width: fit-content;
+    margin: 0;
+  }
+}
+
+.about-me-right-container {
+  display: flex;
+  align-items: center;
+
+  .pic {
+    height: 450px;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 4px solid #fa7902;
+  }
+}
+
+.line-photo {
+  width: 270px;
+  height: 0;
+  border: 2px solid #fa7902;
+}
+
+.shadow {
+  position: absolute;
+  right: -400px;
+  top: -100px;
+  z-index: -1;
+}
+
+@media (max-width: 1326px) {
+  .line-photo {
+    width: 100px;
+  }
+}
+
+@media (max-width: 1239px) {
+  .about-me-right-container {
+    .pic {
+      height: 350px;
+    }
+  }
+
+  h2 {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .about-me-right-container {
+    display: none;
+  }
+
+  .about-me-left-container {
+    width: auto;
+  }
+}
+
+@media (max-width: 800px) {
+  h2 {
+    font-size: 45px;
+  }
+}
